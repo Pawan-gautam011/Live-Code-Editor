@@ -5,6 +5,10 @@ import { html } from '@codemirror/lang-html';
 import { css } from '@codemirror/lang-css';
 import { javascript } from '@codemirror/lang-javascript';
 import Results from './components/Results';
+import { FaHtml5 } from "react-icons/fa";
+import { FaCss3Alt } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io";
+
 
 function App() {
   const [htmledit, setHtmlEdit] = useState('');
@@ -37,7 +41,8 @@ function App() {
       <div className='p-2'>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-2'>
           <div className='bg-[#282c34] p-4 rounded-lg shadow'>
-            <h2 className='text-lg font-semibold mb-2 text-white'>HTML</h2>
+            <h2 className='text-lg flex items-center  font-semibold mb-2 text-white'>HTML <FaHtml5 className='text-orange-600 m-2' />
+            </h2>
             <CodeMirror
               className='text-xl border-gray-700 border'
               value={htmledit}
@@ -49,7 +54,7 @@ function App() {
           </div>
 
           <div className='bg-[#282c34] p-4 rounded-lg shadow'>
-            <h2 className='text-lg font-semibold mb-2 text-white'>CSS</h2>
+            <h2 className='text-lg flex items-center font-semibold mb-2 text-white'>CSS<FaCss3Alt className='text-blue-700 m-2' /></h2>
             <CodeMirror
               className='text-xl border-gray-700 border'
               value={cssedit}
@@ -61,7 +66,8 @@ function App() {
           </div>
 
           <div className='bg-[#282c34] p-4 rounded-lg shadow'>
-            <h2 className='text-lg font-semibold mb-2 text-white'>JavaScript</h2>
+            <h2 className='text-lg flex items-center  font-semibold mb-2 text-white'>JavaScript <IoLogoJavascript className='text-yellow-500 m-2' />
+            </h2>
             <CodeMirror
               className='text-xl border-gray-700 border'
               value={jsedit}
